@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="eng">
 
 <head>
@@ -20,20 +20,35 @@
 
 <body>
 <section id='home'>
-  <Header><div class="logo"> <img src=""></div>
-    <nav>
-      <ul>
-        <li><a href='#'>About Geo-Search</a></li>
-      </ul>
-    </nav>
+  <Header> 
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" alt="logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href='#'>About Geo-Search</a></li>
+        </ul>
+      </nav>
+    </div>
   </Header>
   <div class="main-landing">
-    <form>
+    <form id="form-1">
     <input type="text" name="search" placeholder="Enter a location here">
-    <button name="button">Get me Geo info!</button>
+    <button name="button" class="button">Get me Geo info!</button>
     </form>
   </div>
-  
+
+  <!--Scroll indicator-->
+  <div class="arrow-container animated fadeInDown">
+      <div class="arrow-2">
+        <i class="fa fa-angle-down"></i>
+      </div>
+      <div class="arrow-1 animated hinge infinite zoomIn"></div>
+    </div>
+
+
+
 </section>
 <section id='about'>
   <h2>About Geo-Search</h2>
