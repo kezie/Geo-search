@@ -19,54 +19,59 @@
 </head>
 
 <body>
-<section id='home'>
-  <Header> 
-    <div class="container">
-      <div class="logo">
-        <img src="img/logo.png" alt="logo">
+<section class="index">
+<header>
+<div class="grid-container-1">      
+  <div class="one"><img src="img/logo.png" width="300px" alt="logo">
+  </div>
+  <div class="two"><nav>
+      <ul>
+        <li><a href='#'>About</a></li>
+      </ul>
+    </nav>
+  </div>  
+</div>
+</header>
+
+<div class="grid-container-2">      
+    <div class="three">    
+      <form id="form-1">
+        <input type="text" name="search" placeholder="Enter a location here">
+        <button name="button" class="button">Get me Geo info!</button>
+      </form>
+        
+      <!--Scroll indicator-->
+      <div class="arrow-container animated fadeInDown">
+          <div class="arrow-2">
+            <i class="fa fa-angle-down"></i>
+          </div>
+          <div class="arrow-1 animated hinge infinite zoomIn"></div>
+       </div>
       </div>
-      <nav>
-        <ul>
-          <li><a href='#'>About Geo-Search</a></li>
-        </ul>
-      </nav>
-    </div>
-  </Header>
-  <div class="main-landing">
-    <form id="form-1">
-    <input type="text" name="search" placeholder="Enter a location here">
-    <button name="button" class="button">Get me Geo info!</button>
-    </form>
+     
+</div>
+
+</section>
+<section class="section-two">
+  <div class="grid-container-3">
+      
+        <h2 class="four">About Geo-Search</h2>
+      
+      <div class="five">
+        <h1>Geo-search is a web service that lets you search for maps and weather conditions of places of interest</h1>
+        <p>Enter <strong><em>any</em></strong> location and you can get tons of interesting geo facts about that location.</p>
+        <button class="button">Start Searching!</button>
+      </div>
+      <div class="six">
+          <div class="six-one"><a href='#'>Terms of Service</a></div>
+          <div class="six-two"><a href="#">Privacy</a></div>
+          <div class="six-three"><a href="#">&copy Nile Media 2019</a></div>
+          <div class="six-four"><a href="#">Contact</a></div>
+          <div class="six-five"><a href="#">Sitemap</a></div>
+      </div>
   </div>
 
-  <!--Scroll indicator-->
-  <div class="arrow-container animated fadeInDown">
-      <div class="arrow-2">
-        <i class="fa fa-angle-down"></i>
-      </div>
-      <div class="arrow-1 animated hinge infinite zoomIn"></div>
-    </div>
-
-
-
 </section>
-<section id='about'>
-  <h2>About Geo-Search</h2>
-  <h1>Geo-search is a web service that lets you search for maps and weather conditions of places of interest</h1>
-  <p>Enter <span>any</span> location and you can get tons of interesting geo facts about that location.</p>
-  <button>Start Searching!</button>
-
-  <footer>
-  <div><p><a href='#'>Terms of Service </a></p></div> <div><p><a href='#'>Privacy</a></p></div> <p><a href='#'>&copy Nile Media 2019</a></p> <p><a href='#'>Contact</a></p> <p><a href='#'>Sitemaps</a></p>
-  </footer>
-</section>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
- 
-  <script src="js/script.js"></script>
-
- 
 </body>
 
 </html>

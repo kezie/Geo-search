@@ -5,71 +5,128 @@ body{
     background-color:#f4f4f4;
   }
 
-
-.container{
-    width:80%;
-    margin:auto;
-    overflow:hidden;
+  ul{
+    margin:0;
+    padding:0;
   }
 
-.logo{
-    display: inline;
-    float: left;
+  li > a{
+    color: #000021;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:1em;
+    margin-top: 10px;
+  }
+
+  ul> li{
+    float:right;
+    display:inline;
+    padding: 0 20px 0 20px;
+  }
+
+  .grid-container-1 {
+    display: grid;
+    grid-template-columns: auto auto ;
+    padding: 40px;
+  }
+  
+  .grid-container-1 > div.one {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .grid-container-1 > div.two {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 35px;
+    font-size: 30px;
+    text-align: right;
+  }
+
+  .grid-container-2 {
+    display: grid;
+    grid-template-columns: auto ;
+    padding: 40px;
+    height: calc(90vh - 140px);
     
-}
-
-Header nav {
-    display: none;
-}
-
-
-img {
-    width: 100%;
-}
-
-#home{
-    min-height: 100vh;
-    overflow: hidden;
-    margin:auto;
-    align-items:center;
-}
-
-
-.main-landing {
-    display: block;
-    min-height:400px;
+  }
+  
+  .grid-container-2 > div.three {
     background:url('../img/background.png') no-repeat +50% 0;
     background-size: contain;
-    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+
+
+  .grid-container-3 {
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: 100px auto 100px;
+    padding: 0px 40px 0 40px;
+    height: 95vh;
+    margin:0;
+  }
+
+  .grid-container-3 > h2.four {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-top: 0;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
     overflow: hidden;
-    text-align:center;
-    color:#000021;
-    margin: 30% auto 0 auto;
+  }
+
+  .grid-container-3 > div.five {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
     
   }
 
-  #about {
-    min-height: 100vh;
-    background:url('../img/about-us.png') no-repeat -500px 0;
-    text-align:center;
-    color:#ffffff;
+  .grid-container-3 > div.six {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto ;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    margin-top: 10px ;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    justify-items: center;
   }
 
-  li a {
-    text-decoration: none;
+  .grid-container-3 > div.six >div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0 20px 20px 20px;
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
+    height: 20px;
+    margin: 0, 20px;
+  }
+
+
+#form-1{
+    margin-top: 50px;
 }
 
-
-
-  #form-1{
-      margin-top: 25%;
-  }
-
-  #form-1 input{
-    padding:4px;
-    height:25px;
-    width:250px;
-  }
+#form-1 input{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
 
 .button{
     margin-top: 10px;
@@ -81,108 +138,8 @@ img {
     color:#ffffff;
   }
 
-/*about section*/
-
-
-
-
-    /* bouncing arrow */
-
-
-    /* icon: https://fortawesome.github.io/Font-Awesome/icons/ */
-/* Animation: https://daneden.github.io/animate.css/ */
-
+.section-two{
+    min-height: 100vh;
+    background:url('../img/about-us.png') no-repeat 0 0;
+}
   
-  .arrow-container{
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-  }
-  
-  .arrow-1{
-    width: 100px;
-    height: 100px;
-    background: #00BCD4;
-    opacity: 0.5;
-    border-radius: 50%;
-    position: absolute;
-  }
-  
-  .arrow-2{
-    width: 60px;
-    height: 60px;
-    background: #00BCD4;
-    border-radius: 50%;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1;
-    display: table;
-  }
-  
-  .arrow-2:before{
-    width: 52px;
-    height: 52px;
-    content: "";
-    border: 2px solid #006064;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-  }
-  
-  .arrow-2 i.fa{
-    font-size: 30px;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    color: #006064;
-  }
-  
-  /* Custom Animate.css */
-  
-  .animated.hinge {
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-  }
-  
-  @-webkit-keyframes zoomIn {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale3d(.4, .4, .4);
-              transform: scale3d(.4, .4, .4);
-    }
-  
-    50% {
-      opacity: 0.5;
-    }
-    
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  @keyframes zoomIn {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale3d(.4, .4, .4);
-              transform: scale3d(.4, .4, .4);
-    }
-  
-    50% {
-      opacity: 0.5;
-    }
-    
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  .zoomIn {
-    -webkit-animation-name: zoomIn;
-            animation-name: zoomIn;
-  }
