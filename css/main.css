@@ -122,11 +122,6 @@ body{
     margin-top: 50px;
 }
 
-#form-1 input{
-  padding:4px;
-  height:25px;
-  width:250px;
-}
 
 .button{
     margin-top: 10px;
@@ -235,5 +230,96 @@ body{
 .zoomIn {
   -webkit-animation-name: zoomIn;
           animation-name: zoomIn;
+}
+
+
+/*Results page*/
+
+
+
+#form-2{
+  margin-top: 0px;
+}
+
+#form-2 input{
+  padding:4px;
+  height:25px;
+  width:50%;
+}
+
+.grid-container-4 {
+  display: grid;
+  grid-template-columns: 20% auto ;
+  padding: 0;
+}
+
+.grid-container-4 > div.one {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 0;
+  font-size: 30px;
+  text-align: left;
+  max-width: 300px;
+}
+
+.grid-container-4 > div.two {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 0 35px;
+  font-size: 30px;
+  text-align: left;
+  margin-top: 0;
+
+}
+
+.result-header{
+  padding: 0;
+  margin:0;
+  border-collapse: collapse;
+}
+
+.grid-container-5 {
+  display: grid;
+  grid-template-columns: 20% auto  auto;
+  padding: 40px 0;
+  height: calc(80vh - 140px);
+  
+}
+
+.grid-container-5 > div.three {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+div.six {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  margin-top: 10px ;
+  font-size: 1em;
+  text-align: center;
+  height: 50px;
+  justify-items: center;
+}
+
+td{
+  border: 1px solid #000021;
+  padding: 20px;
+  margin: none;
+}
+
+table{
+  margin:20px auto;
+  text-align: center;
+}
+
+thead{
+  margin:auto;
+  text-align:center;
 }
   
