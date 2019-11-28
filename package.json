@@ -1,0 +1,22 @@
+{
+  "name": "geo-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kezie/Geo-search.git"
+  },
+  "author": "Chikezie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kezie/Geo-search/issues"
+  },
+  "homepage": "https://github.com/kezie/Geo-search#readme",
+  "devDependencies": {
+    "eslint": "^6.5.1"
+  }
+}
