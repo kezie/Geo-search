@@ -1,11 +1,10 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true,
-        "node": true
+        "es6": true
     },
     "extends": [
-        "airbnb-base"
+        "eslint:recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -15,6 +14,9 @@ module.exports = {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
+    "plugins": [
+        
+    ],
     "rules": {
     }
 };

@@ -12,6 +12,8 @@
 
 
   <link rel="apple-touch-icon" href="icon.png">
+
+  
   <!--Remove below before code review-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
   
@@ -22,35 +24,37 @@
 
 <body>
 <section class="index">
-<header>
-<div class="grid-container-1">      
-  <div class="one"><img src="img/logo.png" width="300px" alt="logo">
-  </div>
-  <div class="two"><nav>
-      <ul>
-        <li><a href='#'>About</a></li>
-      </ul>
-    </nav>
-  </div>  
-</div>
-</header>
+    <header>
+    <div class="grid-container-1">      
+    <div class="one"><img src="img/logo.png" width="300px" alt="logo">
+    </div>
+    <div class="two"><nav>
+        <ul>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </div>  
+    </div>
+    </header>
 
-<div class="grid-container-2">      
-    <div class="three">    
-      <form id="form-1">
-        <input type="text" name="search" placeholder="Enter a location here">
-        <button name="button" class="button">Get me Geo info!</button>
-      </form>
-        
-      <!--Scroll indicator-->
-      <div class="arrow-container animated fadeInDown">
-        <div class="arrow-2">
-          <img src="./img/angle-down-solid.svg" width="40px" height="40px" style="margin-top: 10px;"></i>
+    <div class="grid-container-2">      
+      <div class="three">    
+        <form id="form-1" action="/results.html">
+          <input id="search-text" type="text" name="search" placeholder="Enter a location here">
+          <button id="search-button" class="button" type="submit" >Get Me Geo Info</button>
+          
+        </form>
+          
+        <!--Scroll indicator-->
+        <div class="arrow-container animated fadeInDown">
+          <div class="arrow-2">
+            <img src="./img/angle-down-solid.svg" width="40px" height="40px" style="margin-top: 10px;">
+          </div>
+          <div class="arrow-1 animated hinge infinite zoomIn"></div>
         </div>
-        <div class="arrow-1 animated hinge infinite zoomIn"></div>
-      </div>
-     
-</div>
+        
+    </div>
+    </div>
 
 </section>
 <section class="section-two">
@@ -64,7 +68,7 @@
         <button class="button">Start Searching!</button>
       </div>
       <div class="six">
-          <div class="six-one"><a href='#'>Terms of Service</a></div>
+          <div class="six-one"><a href="#">Terms of Service</a></div>
           <div class="six-two"><a href="#">Privacy</a></div>
           <div class="six-three"><a href="#">&copy Nile Media 2019</a></div>
           <div class="six-four"><a href="#">Contact</a></div>
@@ -73,6 +77,46 @@
   </div>
 
 </section>
+<script src="./js/script.js"></script>
+
+<script>
+  
+    $( document ).ready(function() {
+
+      var form = document.getElementById('form-2');
+
+      form.onsubmit = function() {
+
+        var locationInput = document.getElementById("search-text").value;
+
+        fetch('https://api.openweathermap.org/data/2.5/weather?q='+locationInput+'&appid=07f14227f66725d22cbd22efeb82150a').then( response => response.json())
+
+.then( data => {
+
+  var nameOutput = data['name'];
+
+  var windOutput = data['wind']['speed'];
+
+  var tempOutput = data['main']['temp'];
+
+  var humidOutput = data['main']['humidity'];
+
+  var weatherDesc = data['weather'][0]['description'];
+
+  var lonOut = data['coord']['lon'];
+
+  var latOut = data['coord']['lat'];})
+        sessionStorage.setItem("location", locationInput);
+        sessionStorage.setItem("response", response);
+
+      }
+    }); 
+    
+     
+</script>
+
+
+
 </body>
 
 </html>

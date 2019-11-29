@@ -9,11 +9,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="keywords" content="weather, maps, temperature conversion, celsius, fahrenheit">
   <meta name="author" content="Chikezie Oguamanam">
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
 
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
 
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+  <script src="jquery-3.4.1.min.js"></script>
   <link rel="apple-touch-icon" href="icon.png">
   
   <link rel="stylesheet" href="css/main.css">
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link  href="https://leafletjs-cdn.s3.amazonaws.com/content/leaflet/master/leaflet.css" rel="stylesheet" type="text/css">
+
+
 </head>
 
 <body>
@@ -21,11 +33,11 @@
 
   <header class="result-header">
     <div class="grid-container-4">      
-      <div class="one"><img src="img/logo-2.png"  alt="logo"></div>
+      <div class="one" ><a href="#" onclick="window.location.href = './index.html'"> <img src="img/logo-2.png"  alt="logo"></a></div>
       <div class="two">
             <form id="form-2">
-            <input type="text" name="search" placeholder="Enter a location here">
-            <button name="button" class="button">Get me Geo info!</button>
+            <input type="text" id="searchInput" name="search" placeholder="Enter a location here">
+            <button id="search-button" class="button" type="submit" name="button" >Get me Geo info!</button>
           </form>
       </div>  
     </div>
@@ -34,8 +46,8 @@
     <div class="grid-container-5"> 
         <div> </div>     
         <div class="three">
-          <div id="result-Title"> Placeholder </div> 
-          <div id="location-map"> </div>
+          <div id="resultTitle"> </div> 
+          <div id="maparea" class="map" > </div>
            
           
             
@@ -44,13 +56,20 @@
         </div>
         <div id="info-table">
           <table>
-             <th>Weather information</th>
+             <th id="error">Weather information</th>
             <tbody>
                 <tr><th>Measurement</th><th>Value</th><th>Units</th></tr>
-                <tr><td>Temp</td><td></td><td></td></tr>
-                <tr><td>Humidity</td><td></td><td></td></tr>
-                <tr><td>Current Weather</td><td></td><td></td></tr>
-                <tr><td>Precipitation</td><td></td><td></td></tr>
+                <tr><td>Temp</td><td id="temp"></td><td id="tempToggle">
+                    <select id="sel" onchange="toggle()">
+                      <option value="1" selected>Kelvin</option>
+                      <option value="2">Fahrenheit</option>
+                      <option value="3">Celsius</option>
+                    </select></td></tr>
+                <tr><td>Humidity</td><td id="humidity"></td><td>%</td></tr>
+                <tr><td>Wind Speed</td><td id="wind"></td><td>m/s</td></tr>
+                <tr><td>Pressure</td><td id="pressure"></td><td>hPa</td></tr>
+                <tr><td>Lat, Lon</td><td id="lati"></td><td id="long"></td></tr>             
+                <tr style="display: none;"><td>Pressure</td><td id="holder"></td><td>hPa</td></tr>
 
 
             </tbody>
@@ -63,18 +82,20 @@
       
     </div>
     <div class="six">
-      <div class="six-one"><a href='#'>Terms of Service</a></div>
+      <div class="six-one"><a href="#">Terms of Service</a></div>
       <div class="six-two"><a href="#">Privacy</a></div>
-      <div class="six-three"><a href="#">&copy Nile Media 2019</a></div>
+      <div class="six-three"><a href="#">&copy; Nile Media 2019</a></div>
       <div class="six-four"><a href="#">Contact</a></div>
       <div class="six-five"><a href="#">Sitemap</a></div>
     </div>
 
 
 
+<script src="./js/script.js"> </script>
 
 
-</div>
+
+
 
 
 
