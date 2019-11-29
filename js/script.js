@@ -46,6 +46,22 @@ const reportSection7 = document.getElementById('lati');
                 document.getElementById('titleText').textContent = cityInput.value;        
               
                 };
+
+                function toggle () {
+                                        
+                  if (cont[1]) {
+                      reportSection1.textContent = ((reportSection5.textContent -273.15)*1.8)+32;
+                      
+                                            
+                  } else if(cont[2]) {
+                      reportSection1.textContent = reportSection5.textContent -273.15;
+                      
+                  }else {
+                    reportSection1.textContent = reportSection5;
+                  }
+                }
+              
+                let cont = document.getElementsByTagName("option") ;
       
                 
   
